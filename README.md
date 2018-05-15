@@ -16,7 +16,7 @@ cd storia-imoveis-scrapy
 
 ### Run a spider
 
-To run a spider:
+To run a specific spider:
 
 ```bash
 scrapy spider <name_of_the_spider>
