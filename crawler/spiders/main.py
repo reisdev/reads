@@ -4,23 +4,24 @@ import csv
 from scrapy.selector import Selector
 
 
-class TestSpider(scrapy.Spider):
-    name = 'test'
+class MainSpider(scrapy.Spider):
+    name = 'main'
     allowed_domains = ['zapmoveis.com.br']
 
-    def __init__(self, filename='new.csv', init=0, end=10, *args, **kwargs):
-        super(TestSpider, self).__init__(*args, **kwargs)
+    def __init__(self, filename='new.csv', city='goiania', state='go', init=0, end=10, *args, **kwargs):
+        super(MainSpider, self).__init__(*args, **kwargs)
         self.init = init
         self.end = end
         self.filename = filename
+        self.url = 'https://www.storiaimoveis.com.br/comprar/'
+        self.city = city
+        self.state = state
 
     def start_requests(self):
-        url = 'https://www.storiaimoveis.com.br/comprar/curitiba-pr'
-
         self.fileLoader()
 
         for i in range(int(self.init), int(self.end)):
-            tmp = url+"?page=%d" % i
+            tmp = self.url+"%s-%s?page=%d" % (self.city, self.state, i)
             yield scrapy.Request(url=tmp, callback=self.parse)
 
     def fileLoader(self):
