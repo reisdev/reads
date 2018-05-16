@@ -12,4 +12,15 @@ class ZapimoveisSpider(scrapy.Spider):
         yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
-        pass
+        items = response.css('article.minificha')
+        for item in items:
+            # Extracts the price
+            price = item.css('div.preco strong::text').extract_first()
+            price = price[3:]
+            # Extracts the address
+            address = item.css('section.endereco')
+            neighborhood = address.css('strong::text').extract_first()
+            street = address.css(
+                'span[itemprop="streetAddress"]::text').extract_first()
+
+            print(price, neighborhood, street)
