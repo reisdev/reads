@@ -21,7 +21,7 @@ class MainSpider(scrapy.Spider):
         self.fileLoader()
 
         for i in range(int(self.init), int(self.end)):
-            tmp = self.url+"%s-%s?page=%d" % (self.city, self.state, i)
+            tmp = self.url+"%s-%s/terreno?page=%d" % (self.city, self.state, i)
             yield scrapy.Request(url=tmp, callback=self.parse)
 
     def fileLoader(self):
