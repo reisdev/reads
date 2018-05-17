@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import csv
-from scrapy.selector import Selector
 
 
 class StoriaSpider(scrapy.Spider):
@@ -35,7 +34,7 @@ class StoriaSpider(scrapy.Spider):
                 file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             # The line below set the headers of the sheet, on the file creation
             self.planilha.writerow(
-                ['Localização', 'Preço'])
+                ['Bairro', 'Rua', 'Preço'])
         except ValueError:
             self.file = open('results/%s.csv' % self.filename, 'a')
             self.planilha = csv.writer(
@@ -49,5 +48,5 @@ class StoriaSpider(scrapy.Spider):
                 'div[data-ui-tracker="OFFER_PRICE"]::text').extract_first()
             price = price[3:]  # This line removes the 'R$ ' from the string
             local = item.css(
-                'div span[class="f8 light-gray"]::text').extract_first()
-            self.planilha.writerow([local, price])
+                'div span[class="f8 light-gray"]::text').extract_first().split(' - ')
+            self.planilha.writerow([local[1], local[0], price])
