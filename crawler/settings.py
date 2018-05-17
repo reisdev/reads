@@ -23,6 +23,8 @@ DUPEFILTER_CLASS = 'scrapy.dupefilters.BaseDupeFilter'
 ROBOTSTXT_OBEY = False
 USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
 
+DUPEFILTER_CLASS = 'scrapy.dupefilters.BaseDupeFilter'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
