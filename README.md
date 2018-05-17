@@ -6,6 +6,7 @@ to get the price, location and anything else.
 This project actually have crawlers for the following websites:
 
 * [Stória Imóveis](https://www.storiaimoveis.com.br/)
+* [ImovelWeb](http://www.imovelweb.com.br/)
 
 ## How to
 
