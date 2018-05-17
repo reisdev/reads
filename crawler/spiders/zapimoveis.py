@@ -17,6 +17,8 @@ class ZapimoveisSpider(scrapy.Spider):
         self.city = city
         self.state = state
         self.counter = 0
+        self.urls = []
+        self.items = []
 
     def fileLoader(self):
         try:
@@ -25,7 +27,7 @@ class ZapimoveisSpider(scrapy.Spider):
                 file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             # The line below set the headers of the sheet, on the file creation
             self.planilha.writerow(
-                ['Bairro', 'Rua', 'Preço'])
+                ['ID', 'Bairro', 'Rua', 'Preço'])
         except ValueError:
             self.file = open('results/%s.csv' % self.filename, 'a')
             self.planilha = csv.writer(
@@ -34,20 +36,39 @@ class ZapimoveisSpider(scrapy.Spider):
     def start_requests(self):
         self.fileLoader()
         for i in range(self.init, self.end):
-            parameters = '?__zt=pdpnumber:40#{"precomaximo":"2147483647","parametrosautosuggest":[{"Bairro":"","Zona":"","Cidade":"","Agrupamento":"","Estado":"GO"}],"pagina":"%d","ordem":"Relevancia","paginaOrigem":"ResultadoBusca","semente":"1396422568","formato":"Lista"}' % i
-            url = self.url + '/%s+%s/%s' % (self.state, self.city, parameters)
-            yield scrapy.Request(url, callback=self.parse_items)
+            parameters = '?__zt=pdpnumber:40# {"pagina":"%d"}' % i
+            self.urls.append(self.url + '/%s+%s/%s' %
+                             (self.state, self.city, parameters))
+        for each in self.urls:
+            yield scrapy.Request(url=each, callback=self.parse_items)
 
     def parse_items(self, response):
-        items = response.css('article.minificha')
-        for item in items:
+        announces = response.css('article.minificha')
+        self.items = []
+        for item in announces:
+            temp = {}
             self.counter += 1
             # Extracts the price
             price = item.css('div.preco strong::text').extract_first()
-            price = price[3:]
+            temp['price'] = price[3:]
+            # Extracts the id
+            section = item.css(
+                'section.caracteristicas a::attr("href")').extract_first()
+            temp['url'] = section
+            pagina = section.split('=')
+            if(len(pagina) == 2):
+                temp['pagina'] = pagina[1]
+            else:
+                temp['pagina'] = ''
+            temp['id'] = section.split('/')[5]
             # Extracts the address
             address = item.css('section.endereco')
-            neighborhood = address.css('strong::text').extract_first()
-            street = address.css(
+            temp['neighborhood'] = address.css('strong::text').extract_first()
+            temp['street'] = address.css(
                 'span[itemprop="streetAddress"]::text').extract_first()
-            self.planilha.writerow([neighborhood, street, price])
+            if [temp['id'], temp['pagina']] in self.items:
+                print('Já tem')
+            else:
+                self.items.append([temp['id'], temp['pagina']])
+                self.planilha.writerow(
+                    [temp['id'], temp['neighborhood'], temp['street'], temp['price'], temp['pagina']])
