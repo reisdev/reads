@@ -9,19 +9,9 @@ class ImovelwebSpider(scrapy.Spider):
     start_urls = ['www.imovelweb.com.br/']
 
     def __init__(self, filename='new', city='goiania', state='go', *args, **kwargs):
-        super(ImovelwebSpider, self).__init__(*args, **kwargs)
-        self.counter = 0
+        super(ImovelwebSpider, self).__init__()
+        self.urls = []
         self.filename = filename
-
-    def start_requests(self):
-
-        self.fileLoader()
-
-        url = "http://www.imovelweb.com.br/terrenos-venda-goias"
-        for i in range(1, 45):
-            temp = url+'-pagina-%d.html' % i
-            yield scrapy.Request(url=temp, callback=self.parse)
-        print("Number of results: %d" % self.counter)
 
     def fileLoader(self):
         try:
@@ -30,20 +20,34 @@ class ImovelwebSpider(scrapy.Spider):
                 file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             # The line below set the headers of the sheet, on the file creation
             self.planilha.writerow(
-                ['Bairro', 'Rua', 'Preço'])
+                ['ID', 'Bairro', 'Rua', 'Preço'])
         except ValueError:
             self.file = open('results/%s.csv' % self.filename, 'a')
             self.planilha = csv.writer(
                 file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
+    def start_requests(self):
+        url = "http://www.imovelweb.com.br/terrenos-venda-goiania-go"
+        self.fileLoader()
+        self.urls.append((url+'.html'))
+        for i in range(1, 13):
+            self.urls.append(url+'-pagina-%d.html' % i)
+        for url in self.urls:
+            yield scrapy.Request(url=url, callback=self.parse)
+
     def parse(self, response):
         items = response.css('li.aviso')
         for item in items:
-            self.counter += 1
+            temp = {}
+            temp['id'] = item.css('::attr("data-aviso")').extract_first()
             price = item.css(
                 'span.aviso-data-price-value::text').extract_first()
-            price = price[3:]
+            temp['price'] = price[3:]
+            street = item.css(
+                'span.aviso-data-location::text').extract_first().strip().replace('\t', '').replace('\n-', '').replace(',', '')
+            temp['street'] = street
             location = item.css(
-                'span.aviso-data-location span::text').extract_first().split(', ')
-
-            self.planilha.writerow([location[0], location[1], price])
+                'span.aviso-data-location span::text').extract_first().split(',')
+            temp['neighborhood'] = location[0]
+            self.planilha.writerow(
+                [temp['id'], temp['neighborhood'], temp['street'], temp['price']])
