@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import scrapy
-import urllib.parse as urlparse
 import csv
 
 
@@ -18,7 +17,7 @@ class ZapimoveisSpider(scrapy.Spider):
         self.state = state
         self.counter = 0
         self.urls = []
-        self.items = []
+        self.links = []
 
     def fileLoader(self):
         try:
@@ -40,35 +39,28 @@ class ZapimoveisSpider(scrapy.Spider):
             self.urls.append(self.url + '/%s+%s/%s' %
                              (self.state, self.city, parameters))
         for each in self.urls:
-            yield scrapy.Request(url=each, callback=self.parse_items)
+            yield scrapy.Request(url=each, dont_filter=True, callback=self.parse)
 
-    def parse_items(self, response):
-        announces = response.css('article.minificha')
-        self.items = []
-        for item in announces:
-            temp = {}
-            self.counter += 1
-            # Extracts the price
-            price = item.css('div.preco strong::text').extract_first()
-            temp['price'] = price[3:]
-            # Extracts the id
-            section = item.css(
-                'section.caracteristicas a::attr("href")').extract_first()
-            temp['url'] = section
-            pagina = section.split('=')
-            if(len(pagina) == 2):
-                temp['pagina'] = pagina[1]
-            else:
-                temp['pagina'] = ''
-            temp['id'] = section.split('/')[5]
-            # Extracts the address
-            address = item.css('section.endereco')
-            temp['neighborhood'] = address.css('strong::text').extract_first()
-            temp['street'] = address.css(
-                'span[itemprop="streetAddress"]::text').extract_first()
-            if [temp['id'], temp['pagina']] in self.items:
-                print('Já tem')
-            else:
-                self.items.append([temp['id'], temp['pagina']])
-                self.planilha.writerow(
-                    [temp['id'], temp['neighborhood'], temp['street'], temp['price'], temp['pagina']])
+    def parse(self, response):
+        print(response.request.url)
+        links = response.css('section.endereco a::attr("href")').extract()
+        links = list(map(lambda x: x.split('/?')[0], links))
+        m = list(set(self.links))
+        l = list(set(links))
+        needed = [item for item in l if item not in m]
+        self.links = list(set(self.links + needed))
+        for item in needed:
+            yield from self.request_page(item)
+
+    def request_page(self, link):
+        yield scrapy.Request(link, dont_filter=True, callback=self.parse_page)
+
+    def parse_page(self, response):
+        id = response.css(
+            'input[id="ofertaId"]::attr("data-value")').extract_first()
+        street = response.css('h1.pull-left::text').extract()[1].strip()
+        logradouro = response.css(
+            'span.logradouro::text').extract_first()
+        logradouro = logradouro.split(',')[0] if logradouro != None else ''
+        price = response.css('div.value-ficha::text').extract()[1].strip()[3:]
+        self.planilha.writerow([id, logradouro, street, price])
