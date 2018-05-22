@@ -35,7 +35,7 @@ class ZapimoveisSpider(scrapy.Spider):
 
     def start_requests(self):
         self.fileLoader()
-        url = 'https://www.zapimoveis.com.br/venda/terreno-padrao/go+goiania/#{"pagina":"1"}'
+        url = 'https://www.zapimoveis.com.br/venda/terreno-padrao/go+goiania/#{"pagina":"1","possuiendereco":"True"}'
         yield scrapy.Request(url, callback=self.parse)
 
     def storeLink(self, links):
@@ -52,7 +52,7 @@ class ZapimoveisSpider(scrapy.Spider):
             next = self.driver.find_element_by_id('proximaPagina')
             try:
                 self.driver.execute_script("arguments[0].click()", next)
-                sleep(3)
+                sleep(5)
                 links = self.driver.find_elements_by_xpath(
                     '//section[contains(@class,"endereco")]/a')
                 self.storeLink(links)

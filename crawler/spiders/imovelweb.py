@@ -22,7 +22,7 @@ class ImovelwebSpider(scrapy.Spider):
                 file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             # The line below set the headers of the sheet, on the file creation
             self.planilha.writerow(
-                ['Bairro', 'Rua', 'Preço', 'Latitude', 'Longitude'])
+                ['Bairro', 'Rua', 'Preço', 'Latitude', 'Longitude', 'Link'])
         except ValueError:
             self.file = open('results/%s.csv' % self.filename, 'a')
             self.planilha = csv.writer(
@@ -40,6 +40,8 @@ class ImovelwebSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse, dont_filter=True)
 
     def parse_page(self, response):
+
+        link = response.request.url
         # Get price
         price = response.css('strong.venta::text').extract_first()
         price = price[3:]
@@ -64,7 +66,7 @@ class ImovelwebSpider(scrapy.Spider):
             street = tmp[0].strip()
             neighborhood = tmp[1].strip()
 
-        self.planilha.writerow([neighborhood, street, price, lat, lng])
+        self.planilha.writerow([neighborhood, street, price, lat, lng, link])
 
     def request_page(self, link):
         yield scrapy.Request(url=link, callback=self.parse_page, dont_filter=True)

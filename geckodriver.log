@@ -943,3 +943,66 @@ JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.
 JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
 1526963821613	geckodriver::marionette	ERROR	Failed to stop browser process
+1526964468399	geckodriver	INFO	geckodriver 0.20.0
+1526964468406	geckodriver	INFO	Listening on 127.0.0.1:35601
+1526964469447	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.RtcTaI1iGsJX"
+1526964471255	Marionette	INFO	Listening on port 39319
+1526964471364	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:14878): GLib-GIO-WARNING **: 01:47:51.520: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1526964519019	geckodriver	INFO	geckodriver 0.20.0
+1526964519025	geckodriver	INFO	Listening on 127.0.0.1:46169
+1526964520068	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.I6cprKbY4DgF"
+1526964521804	Marionette	INFO	Listening on port 43311
+1526964521882	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:15047): GLib-GIO-WARNING **: 01:48:42.082: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1526964718539	geckodriver	INFO	geckodriver 0.20.0
+1526964718544	geckodriver	INFO	Listening on 127.0.0.1:53645
+1526964719586	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Dh1iLQ93Leoy"
+1526964721267	Marionette	INFO	Listening on port 36203
+1526964721300	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:15346): GLib-GIO-WARNING **: 01:52:01.548: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://www.zapimoveis.com.br/Publicidade/Tealium?w=728&h=90&pos=Top1&po=1, line 2: ReferenceError: osdlfm is not defined
+1526964906396	geckodriver::marionette	ERROR	Failed to stop browser process
+1526967064683	geckodriver	INFO	geckodriver 0.20.0
+1526967064689	geckodriver	INFO	Listening on 127.0.0.1:48869
+1526967065734	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.QlA5ykyAg3Sl"
+1526967067520	Marionette	INFO	Listening on port 34721
+1526967067546	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:16654): GLib-GIO-WARNING **: 02:31:07.766: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1526967123291	geckodriver	INFO	geckodriver 0.20.0
+1526967123298	geckodriver	INFO	Listening on 127.0.0.1:50303
+1526967124338	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.rs4cQ3y96vn0"
+1526967126221	Marionette	INFO	Listening on port 38875
+1526967126258	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:16871): GLib-GIO-WARNING **: 02:32:06.298: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1526967138473	geckodriver::marionette	ERROR	Failed to stop browser process
+1526967284182	geckodriver	INFO	geckodriver 0.20.0
+1526967284186	geckodriver	INFO	Listening on 127.0.0.1:57361
+1526967285233	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.J4Epss8PEvKi"
+1526967287006	Marionette	INFO	Listening on port 46571
+1526967287050	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:17269): GLib-GIO-WARNING **: 02:34:47.296: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://www.zapimoveis.com.br/Publicidade/Tealium?w=728&h=90&pos=Top1&po=1, line 1: ReferenceError: osdlfm is not defined
+1526967423861	geckodriver	INFO	geckodriver 0.20.0
+1526967423866	geckodriver	INFO	Listening on 127.0.0.1:35145
+1526967424910	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.RxjWJ8CZgMsN"
+1526967426661	Marionette	INFO	Listening on port 46605
+1526967426731	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:17592): GLib-GIO-WARNING **: 02:37:06.944: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+JavaScript warning: https://cjs.zapcorp.com.br/Scripts/libs/jquery/jquery-2.0.0.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1526967717961	geckodriver::marionette	ERROR	Failed to stop browser process
