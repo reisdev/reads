@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import csv
+from selenium import webdriver
+from time import sleep
 
 
 class ZapimoveisSpider(scrapy.Spider):
@@ -15,8 +17,7 @@ class ZapimoveisSpider(scrapy.Spider):
         self.url = 'https://www.zapimoveis.com.br/venda/terreno-padrao'
         self.city = city
         self.state = state
-        self.counter = 0
-        self.urls = []
+        self.driver = webdriver.Firefox()
         self.links = []
 
     def fileLoader(self):
@@ -26,7 +27,7 @@ class ZapimoveisSpider(scrapy.Spider):
                 file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             # The line below set the headers of the sheet, on the file creation
             self.planilha.writerow(
-                ['ID', 'Bairro', 'Rua', 'Preço'])
+                ['ID', 'Bairro', 'Rua', 'Preço', 'Latitude', 'Longitude'])
         except ValueError:
             self.file = open('results/%s.csv' % self.filename, 'a')
             self.planilha = csv.writer(
@@ -34,33 +35,53 @@ class ZapimoveisSpider(scrapy.Spider):
 
     def start_requests(self):
         self.fileLoader()
-        for i in range(self.init, self.end):
-            parameters = '?__zt=pdpnumber:40# {"pagina":"%d"}' % i
-            self.urls.append(self.url + '/%s+%s/%s' %
-                             (self.state, self.city, parameters))
-        for each in self.urls:
-            yield scrapy.Request(url=each, dont_filter=True, callback=self.parse)
+        url = 'https://www.zapimoveis.com.br/venda/terreno-padrao/go+goiania/#{"pagina":"1"}'
+        yield scrapy.Request(url, callback=self.parse)
+
+    def storeLink(self, links):
+        for item in links:
+            self.links.append(item.get_attribute('href'))
 
     def parse(self, response):
-        print(response.request.url)
-        links = response.css('section.endereco a::attr("href")').extract()
-        links = list(map(lambda x: x.split('/?')[0], links))
-        m = list(set(self.links))
-        l = list(set(links))
-        needed = [item for item in l if item not in m]
-        self.links = list(set(self.links + needed))
-        for item in needed:
-            yield from self.request_page(item)
-
-    def request_page(self, link):
-        yield scrapy.Request(link, dont_filter=True, callback=self.parse_page)
+        self.driver.get(response.url)
+        position = int(self.driver.find_element_by_name(
+            'txtPaginacao').get_attribute('value'))
+        while True:
+            position = int(self.driver.find_element_by_name(
+                'txtPaginacao').get_attribute('value'))
+            next = self.driver.find_element_by_id('proximaPagina')
+            try:
+                self.driver.execute_script("arguments[0].click()", next)
+                sleep(3)
+                links = self.driver.find_elements_by_xpath(
+                    '//section[contains(@class,"endereco")]/a')
+                self.storeLink(links)
+            except ValueError:
+                print('\n\nCannot click:\n\n')
+                break
+            if position == self.end:
+                break
+        self.driver.close()
+        for item in self.links:
+            yield scrapy.Request(url=item, callback=self.parse_page)
 
     def parse_page(self, response):
         id = response.css(
-            'input[id="ofertaId"]::attr("data-value")').extract_first()
+            'input[name="CodImovel"]::attr("value")').extract_first()
         street = response.css('h1.pull-left::text').extract()[1].strip()
+        street = street.split(',')[0]
         logradouro = response.css(
             'span.logradouro::text').extract_first()
         logradouro = logradouro.split(',')[0] if logradouro != None else ''
-        price = response.css('div.value-ficha::text').extract()[1].strip()[3:]
-        self.planilha.writerow([id, logradouro, street, price])
+        price = response.css(
+            'div.value-ficha::text').extract()[1].strip()[3:].split(',')[0]
+        coord = response.css(
+            'div[id="imgMapaGoogleEstatico"]::attr("onclick")').extract_first()
+        if(coord != None):
+            coord = coord.split('(')[1].split(')')[0].split(',')
+            lat = coord[0]
+            lon = coord[1]
+        else:
+            lat = ''
+            lon = ''
+        self.planilha.writerow([id, logradouro, street, price, lat, lon])
