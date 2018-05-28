@@ -1,0 +1,139 @@
+1527545884363	geckodriver	INFO	geckodriver 0.20.0
+1527545884375	geckodriver	INFO	Listening on 127.0.0.1:49377
+1527545886569	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.I6FAVvGKnfDe"
+1527545897144	Marionette	INFO	Listening on port 42003
+1527545897221	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:18312): GLib-GIO-WARNING **: 19:18:17.370: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547127816	geckodriver	INFO	geckodriver 0.20.0
+1527547127823	geckodriver	INFO	Listening on 127.0.0.1:50449
+1527547128862	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.QRxDWRClr9aT"
+1527547130876	Marionette	INFO	Listening on port 33679
+1527547130896	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:20300): GLib-GIO-WARNING **: 19:38:51.127: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547175120	geckodriver	INFO	geckodriver 0.20.0
+1527547175127	geckodriver	INFO	Listening on 127.0.0.1:41793
+1527547176167	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.iVWMXXDfFHD0"
+1527547178290	Marionette	INFO	Listening on port 44093
+1527547178385	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:20551): GLib-GIO-WARNING **: 19:39:38.600: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547288120	geckodriver	INFO	geckodriver 0.20.0
+1527547288128	geckodriver	INFO	Listening on 127.0.0.1:33585
+1527547289176	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.4YWwMugo4reF"
+1527547291030	Marionette	INFO	Listening on port 42819
+1527547291090	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:20927): GLib-GIO-WARNING **: 19:41:31.331: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547310005	geckodriver	INFO	geckodriver 0.20.0
+1527547310012	geckodriver	INFO	Listening on 127.0.0.1:40769
+1527547311060	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.882OMzJZtgWI"
+1527547313395	Marionette	INFO	Listening on port 33351
+1527547313484	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:21130): GLib-GIO-WARNING **: 19:41:53.524: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547387618	geckodriver	INFO	geckodriver 0.20.0
+1527547387623	geckodriver	INFO	Listening on 127.0.0.1:60241
+1527547388671	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.sTsHwzik5JZt"
+1527547390580	Marionette	INFO	Listening on port 43773
+1527547390601	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:21399): GLib-GIO-WARNING **: 19:43:10.773: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547516702	geckodriver	INFO	geckodriver 0.20.0
+1527547516706	geckodriver	INFO	Listening on 127.0.0.1:40511
+1527547517756	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.6lYM1506yGTi"
+1527547519805	Marionette	INFO	Listening on port 36693
+1527547519883	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:21742): GLib-GIO-WARNING **: 19:45:20.081: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547632794	geckodriver	INFO	geckodriver 0.20.0
+1527547632800	geckodriver	INFO	Listening on 127.0.0.1:35283
+1527547633846	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.dfGLm2Y0rnjd"
+1527547635962	Marionette	INFO	Listening on port 43651
+1527547635994	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:22047): GLib-GIO-WARNING **: 19:47:16.210: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547784453	geckodriver	INFO	geckodriver 0.20.0
+1527547784460	geckodriver	INFO	Listening on 127.0.0.1:58355
+1527547785499	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.tPkWu77rfjr8"
+1527547787539	Marionette	INFO	Listening on port 46515
+1527547787620	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:22387): GLib-GIO-WARNING **: 19:49:47.783: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527547901478	geckodriver	INFO	geckodriver 0.20.0
+1527547901484	geckodriver	INFO	Listening on 127.0.0.1:33641
+1527547902529	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.d9OkxIwNBjcM"
+1527547904985	Marionette	INFO	Listening on port 33065
+1527547905054	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:22804): GLib-GIO-WARNING **: 19:51:45.226: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527547944798	geckodriver	INFO	geckodriver 0.20.0
+1527547944805	geckodriver	INFO	Listening on 127.0.0.1:41123
+1527547944863	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.jm4TSNB2Etm4"
+1527547946951	Marionette	INFO	Listening on port 43991
+1527547946986	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:23044): GLib-GIO-WARNING **: 19:52:27.160: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527548020140	geckodriver	INFO	geckodriver 0.20.0
+1527548020145	geckodriver	INFO	Listening on 127.0.0.1:36613
+1527548021191	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.sL1ssLfAzny1"
+1527548023305	Marionette	INFO	Listening on port 43705
+1527548023408	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:23294): GLib-GIO-WARNING **: 19:53:43.624: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527548057584	geckodriver	INFO	geckodriver 0.20.0
+1527548057599	geckodriver	INFO	Listening on 127.0.0.1:55495
+1527548058639	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.VJtp704XStwW"
+1527548061126	Marionette	INFO	Listening on port 35491
+1527548061158	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:23528): GLib-GIO-WARNING **: 19:54:21.470: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527548119267	geckodriver	INFO	geckodriver 0.20.0
+1527548119275	geckodriver	INFO	Listening on 127.0.0.1:54437
+1527548120321	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.uEuYnRi5A0yb"
+1527548121988	Marionette	INFO	Listening on port 34467
+1527548122043	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:23832): GLib-GIO-WARNING **: 19:55:22.264: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527548186256	geckodriver	INFO	geckodriver 0.20.0
+1527548186263	geckodriver	INFO	Listening on 127.0.0.1:50943
+1527548187304	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.KIzHmMtRQm5A"
+1527548189342	Marionette	INFO	Listening on port 34761
+1527548189418	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:24110): GLib-GIO-WARNING **: 19:56:29.535: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527548229142	geckodriver	INFO	geckodriver 0.20.0
+1527548229147	geckodriver	INFO	Listening on 127.0.0.1:52917
+1527548230200	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.2QScsImnm7uO"
+1527548232112	Marionette	INFO	Listening on port 35937
+1527548232119	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:24333): GLib-GIO-WARNING **: 19:57:12.410: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527548576289	geckodriver	INFO	geckodriver 0.20.0
+1527548576295	geckodriver	INFO	Listening on 127.0.0.1:53865
+1527548577340	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Kh8f78BGtpPD"
+1527548579452	Marionette	INFO	Listening on port 37755
+1527548579474	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:24992): GLib-GIO-WARNING **: 20:02:59.720: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527548604784	geckodriver	INFO	geckodriver 0.20.0
+1527548604790	geckodriver	INFO	Listening on 127.0.0.1:37055
+1527548605831	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.sbZ8JTtWsqi5"
+1527548607824	Marionette	INFO	Listening on port 44203
+1527548607854	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:25198): GLib-GIO-WARNING **: 20:03:28.142: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527548674238	geckodriver::marionette	ERROR	Failed to stop browser process
+1527548788268	geckodriver	INFO	geckodriver 0.20.0
+1527548788273	geckodriver	INFO	Listening on 127.0.0.1:47193
+1527548789609	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.ijnXqyeah2NA"
+1527548792376	Marionette	INFO	Listening on port 46691
+1527548792452	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:25606): GLib-GIO-WARNING **: 20:06:32.804: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.

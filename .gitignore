@@ -2,3 +2,4 @@ crawler/__pycache__
 crawler/spiders/__pycache__
 *.csv
 *.sh
+*.ods
