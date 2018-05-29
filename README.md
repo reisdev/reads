@@ -8,6 +8,7 @@ This project actually have crawlers for the following websites:
 * [Stória Imóveis](https://www.storiaimoveis.com.br/)
 * [ImovelWeb](http://www.imovelweb.com.br/)
 * [ZapImóveis](http://zapimoveis.com.br/)
+* [VivaReal](https://www.vivareal.com.br/)
 
 ## How to
 
