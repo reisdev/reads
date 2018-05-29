@@ -40,7 +40,7 @@ class VivarealSpider(scrapy.Spider):
 
     def start_requests(self):
         self.fileLoader()
-        url = self.main + '/venda/goias/goiania/lote-terreno_residencial/?pagina=33'
+        url = self.main + '/venda/goias/goiania/lote-terreno_residencial/'
         yield scrapy.Request(url=url, callback=self.parse)
 
     def storeLinks(self, links):
