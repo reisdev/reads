@@ -40,7 +40,7 @@ class VivarealSpider(scrapy.Spider):
 
     def start_requests(self):
         self.fileLoader()
-        url = self.main + '/venda/goias/goiania/lote-terreno_residencial/'
+        url = self.main + '/venda/goias/goiania/lote-terreno_residencial/?pagina=33'
         yield scrapy.Request(url=url, callback=self.parse)
 
     def storeLinks(self, links):
@@ -57,7 +57,7 @@ class VivarealSpider(scrapy.Spider):
                 self.storeLinks(links)
                 next.until(EC.element_to_be_clickable(
                     (By.XPATH, '//a[@title="Próxima página"]'))).click()
-                sleep(5)
+                sleep(3)
             except Exception:
                 print('It has ended')
                 break
@@ -73,7 +73,8 @@ class VivarealSpider(scrapy.Spider):
             '//span[@class="aI js-detail-sale-price"]/text()').extract_first()[3:]
         address = response.xpath(
             '//a[@class="U js-title-location"]/text()').extract_first()
-        maps = 'https://maps.googleapis.com/maps/api/geocode/json?address='+address
+        maps = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + \
+            address+'&key=AIzaSyBhJ7IKQWwiNS-vQaAhIleUq1ozFJy0Glc'
         req = requests.get(maps)
         try:
             req = decoder.decode(req.text)[
@@ -81,7 +82,6 @@ class VivarealSpider(scrapy.Spider):
             lat = req['lat']
             lon = req['lng']
         except (RuntimeError, NameError):
-            print(NameError)
             lat = ''
             lon = ''
         self.planilha.writerow([id, address, price, lat, lon, link])

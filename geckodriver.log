@@ -951,3 +951,172 @@ IPDL protocol error: Handler returned error code!
 [Parent 17116, Gecko_IOThread] WARNING: pipe error (108): Connection reset by peer: file /build/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
 1527556293616	geckodriver::marionette	ERROR	Failed to stop browser process
+1527556567086	geckodriver	INFO	geckodriver 0.20.0
+1527556567093	geckodriver	INFO	Listening on 127.0.0.1:56209
+1527556568202	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.LJ0LCe77wxLu"
+1527556570004	Marionette	INFO	Listening on port 36261
+1527556570025	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:17699): GLib-GIO-WARNING **: 22:16:10.260: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527556785072	geckodriver::marionette	ERROR	Failed to stop browser process
+1527558625988	geckodriver	INFO	geckodriver 0.20.0
+1527558625994	geckodriver	INFO	Listening on 127.0.0.1:41853
+1527558627383	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.X1zn2HIZio1e"
+1527558629657	Marionette	INFO	Listening on port 44905
+1527558629700	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:20029): GLib-GIO-WARNING **: 22:50:29.914: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527558745017	geckodriver::marionette	ERROR	Failed to stop browser process
+1527559961612	geckodriver	INFO	geckodriver 0.20.0
+1527559961632	geckodriver	INFO	Listening on 127.0.0.1:38111
+1527559962858	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.LRKIbXWEmE8p"
+1527559966585	Marionette	INFO	Listening on port 40339
+1527559966682	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:22804): GLib-GIO-WARNING **: 23:12:46.867: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527560106824	geckodriver::marionette	ERROR	Failed to stop browser process
+1527560930911	geckodriver	INFO	geckodriver 0.20.0
+1527560930933	geckodriver	INFO	Listening on 127.0.0.1:55255
+1527560932244	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.ISjpOG7XuHFz"
+1527560934715	Marionette	INFO	Listening on port 35449
+1527560934762	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:29833): GLib-GIO-WARNING **: 23:28:54.977: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527561082789	geckodriver::marionette	ERROR	Failed to stop browser process
+1527561148165	geckodriver	INFO	geckodriver 0.20.0
+1527561148173	geckodriver	INFO	Listening on 127.0.0.1:46979
+1527561149993	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.eOkAGb752ASe"
+1527561154781	Marionette	INFO	Listening on port 44985
+1527561154819	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:1315): GLib-GIO-WARNING **: 23:32:35.464: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527561390260	geckodriver::marionette	ERROR	Failed to stop browser process
+1527561501298	geckodriver	INFO	geckodriver 0.20.0
+1527561501305	geckodriver	INFO	Listening on 127.0.0.1:46333
+1527561502457	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.J6Z7eCxU0kGI"
+1527561504354	Marionette	INFO	Listening on port 38759
+1527561504374	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:2048): GLib-GIO-WARNING **: 23:38:24.616: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1527561704048	geckodriver::marionette	ERROR	Failed to stop browser process
+1527562429055	geckodriver	INFO	geckodriver 0.20.0
+1527562429060	geckodriver	INFO	Listening on 127.0.0.1:54093
+1527562430939	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.O8UsLD4UiIUz"
+1527562433878	Marionette	INFO	Listening on port 42571
+1527562433956	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:3153): GLib-GIO-WARNING **: 23:53:54.231: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+[Parent 3153, Gecko_IOThread] WARNING: pipe error (111): Connection reset by peer: file /build/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1527562637253	geckodriver::marionette	ERROR	Failed to stop browser process
+1527562739339	geckodriver	INFO	geckodriver 0.20.0
+1527562739344	geckodriver	INFO	Listening on 127.0.0.1:48317
+1527562740387	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.2vKHMcAscSXv"
+1527562742060	Marionette	INFO	Listening on port 34111
+1527562742099	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:3716): GLib-GIO-WARNING **: 23:59:02.346: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527562753370	geckodriver::marionette	ERROR	Failed to stop browser process
+1527562829286	geckodriver	INFO	geckodriver 0.20.0
+1527562829297	geckodriver	INFO	Listening on 127.0.0.1:42071
+1527562830334	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.IfAoryZqeyCP"
+1527562832063	Marionette	INFO	Listening on port 42021
+1527562832148	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:4510): GLib-GIO-WARNING **: 00:00:32.353: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527562840805	geckodriver::marionette	ERROR	Failed to stop browser process
+1527562857541	geckodriver	INFO	geckodriver 0.20.0
+1527562857546	geckodriver	INFO	Listening on 127.0.0.1:49473
+1527562858591	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.zSExFW02mNpa"
+1527562860274	Marionette	INFO	Listening on port 34309
+1527562860310	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:4746): GLib-GIO-WARNING **: 00:01:00.516: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527562869241	geckodriver::marionette	ERROR	Failed to stop browser process
+1527562904163	geckodriver	INFO	geckodriver 0.20.0
+1527562904168	geckodriver	INFO	Listening on 127.0.0.1:38989
+1527562905211	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.P5fMyWQhtHtC"
+1527562906922	Marionette	INFO	Listening on port 42621
+1527562907023	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:4967): GLib-GIO-WARNING **: 00:01:47.206: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527562917201	geckodriver::marionette	ERROR	Failed to stop browser process
+1527562947616	geckodriver	INFO	geckodriver 0.20.0
+1527562947621	geckodriver	INFO	Listening on 127.0.0.1:41901
+1527562948672	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.hvEMGfAVzmtL"
+1527562950422	Marionette	INFO	Listening on port 33639
+1527562950486	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:5193): GLib-GIO-WARNING **: 00:02:30.654: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527562960664	geckodriver::marionette	ERROR	Failed to stop browser process
+1527563462764	geckodriver	INFO	geckodriver 0.20.0
+1527563462769	geckodriver	INFO	Listening on 127.0.0.1:50507
+1527563463814	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.6Qupjujm06lx"
+1527563465797	Marionette	INFO	Listening on port 34461
+1527563465843	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:5974): GLib-GIO-WARNING **: 00:11:06.101: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+[Child 6040, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1527563526283	geckodriver::marionette	ERROR	Failed to stop browser process
+1527563650778	geckodriver	INFO	geckodriver 0.20.0
+1527563650783	geckodriver	INFO	Listening on 127.0.0.1:51723
+1527563651830	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Gvk2AxZPIrCl"
+1527563653581	Marionette	INFO	Listening on port 37837
+1527563653646	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:6369): GLib-GIO-WARNING **: 00:14:13.812: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527563662493	geckodriver::marionette	ERROR	Failed to stop browser process
+1527563728469	geckodriver	INFO	geckodriver 0.20.0
+1527563728474	geckodriver	INFO	Listening on 127.0.0.1:34531
+1527563729522	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.6vv4YLif4Ott"
+1527563731662	Marionette	INFO	Listening on port 44553
+1527563731746	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:6767): GLib-GIO-WARNING **: 00:15:31.845: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x540027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+[Child 6827, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /build/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 709
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 6827, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527563745267	geckodriver::marionette	ERROR	Failed to stop browser process
+1527563785503	geckodriver	INFO	geckodriver 0.20.0
+1527563785510	geckodriver	INFO	Listening on 127.0.0.1:54551
+1527563786550	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.FSbRL2IKgSLe"
+1527563788643	Marionette	INFO	Listening on port 46857
+1527563788667	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:7014): GLib-GIO-WARNING **: 00:16:28.890: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527563806818	geckodriver::marionette	ERROR	Failed to stop browser process
+1527563868287	geckodriver	INFO	geckodriver 0.20.0
+1527563868293	geckodriver	INFO	Listening on 127.0.0.1:45631
+1527563869336	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.ctK8suYebokJ"
+1527563871509	Marionette	INFO	Listening on port 39379
+1527563871557	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:7260): GLib-GIO-WARNING **: 00:17:51.764: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527563880866	geckodriver::marionette	ERROR	Failed to stop browser process
+1527563924962	geckodriver	INFO	geckodriver 0.20.0
+1527563924969	geckodriver	INFO	Listening on 127.0.0.1:48491
+1527563926019	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.wkY2vfxEYPqc"
+1527563928173	Marionette	INFO	Listening on port 43147
+1527563928235	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:7550): GLib-GIO-WARNING **: 00:18:48.268: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+JavaScript error: https://www.vivareal.com.br/venda/goias/goiania/lote-terreno_residencial/?pagina=33, line 1: ReferenceError: osdlfm is not defined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1527563936742	geckodriver::marionette	ERROR	Failed to stop browser process
