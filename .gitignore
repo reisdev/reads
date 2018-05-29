@@ -1,4 +1,5 @@
 crawler/__pycache__
 crawler/spiders/__pycache__
-results
-*.log
+*.csv
+*.sh
+*.ods
