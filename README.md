@@ -1,9 +1,9 @@
-# imobiliarias-scrapy
+# rsa-crawler
 
-Repository of a Web Crawler made to work with real state agency websites,
+Repository of a Web Crawler made to work with Real State Agency websites,
 to get the price, location and anything else.
 
-This project actually have crawlers for the following websites:
+This project actually have spiders for the following websites:
 
 * [Stória Imóveis](https://www.storiaimoveis.com.br/)
 * [ImovelWeb](http://www.imovelweb.com.br/)
@@ -29,3 +29,7 @@ To crawl a specific spider:
 ```bash
 scrapy crawl <name_of_the_spider>
 ```
+
+#### Spider parameters
+
+
