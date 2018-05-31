@@ -1,5 +1,5 @@
-crawler/__pycache__
-crawler/spiders/__pycache__
+*.cpython-36.pyc
+*.log
 *.csv
 *.sh
 *.ods

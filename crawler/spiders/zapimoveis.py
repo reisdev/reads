@@ -27,7 +27,7 @@ class ZapimoveisSpider(scrapy.Spider):
                 file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             # The line below set the headers of the sheet, on the file creation
             self.planilha.writerow(
-                ['ID', 'Bairro', 'Rua', 'Preço', 'Latitude', 'Longitude'])
+                ['ID', 'Bairro', 'Rua', 'Preço', 'Latitude', 'Longitude', 'Link'])
         except ValueError:
             self.file = open('results/%s.csv' % self.filename, 'a')
             self.planilha = csv.writer(
@@ -50,22 +50,25 @@ class ZapimoveisSpider(scrapy.Spider):
             position = int(self.driver.find_element_by_name(
                 'txtPaginacao').get_attribute('value'))
             next = self.driver.find_element_by_id('proximaPagina')
+            max = int(self.driver.find_element_by_xpath(
+                '//span[@class="pull-right num-of"]').text[3:])
             try:
-                self.driver.execute_script("arguments[0].click()", next)
-                sleep(5)
                 links = self.driver.find_elements_by_xpath(
                     '//section[contains(@class,"endereco")]/a')
                 self.storeLink(links)
-            except ValueError:
-                print('\n\nCannot click:\n\n')
-                break
-            if position == self.end:
+                self.driver.execute_script("arguments[0].click()", next)
+                sleep(5)
+                if position == max:
+                    break
+            except Exception as err:
+                print(err)
                 break
         self.driver.close()
         for item in self.links:
             yield scrapy.Request(url=item, callback=self.parse_page)
 
     def parse_page(self, response):
+        link = response.url
         id = response.css(
             'input[name="CodImovel"]::attr("value")').extract_first()
         street = response.css('h1.pull-left::text').extract()[1].strip()
@@ -84,4 +87,4 @@ class ZapimoveisSpider(scrapy.Spider):
         else:
             lat = ''
             lon = ''
-        self.planilha.writerow([id, logradouro, street, price, lat, lon])
+        self.planilha.writerow([id, logradouro, street, price, lat, lon, link])

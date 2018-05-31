@@ -16,6 +16,8 @@ NEWSPIDER_MODULE = 'crawler.spiders'
 
 DOWNLOAD_TIMEOUT = 250
 
+LOG_LEVEL = 'INFO'
+
 DUPEFILTER_CLASS = 'scrapy.dupefilters.BaseDupeFilter'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
