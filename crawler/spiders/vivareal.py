@@ -4,6 +4,7 @@ from selenium import webdriver
 import csv
 import json
 import requests
+from crawler.item import Lote
 
 decoder = json.JSONDecoder()
 from selenium.webdriver.common.by import By
@@ -22,32 +23,16 @@ class VivarealSpider(scrapy.Spider):
         self.main = 'https://www.vivareal.com.br'
         self.links = []
         self.driver = webdriver.Firefox()
-        self.filename = 'ResultadoVivaReal'
-        self.planilha = {}
-
-    def fileLoader(self):
-        try:
-            file = open('results/%s.csv' % self.filename, 'w')
-            self.planilha = csv.writer(
-                file, delimiter='@', quoting=csv.QUOTE_MINIMAL)
-            # The line below set the headers of the sheet, on the file creation
-            self.planilha.writerow(
-                ['ID', 'Endereço', 'Preço', 'Latitude', 'Longitude', 'Link'])
-        except ValueError:
-            self.file = open('results/%s.csv' % self.filename, 'a')
-            self.planilha = csv.writer(
-                file, delimiter='@', quoting=csv.QUOTE_MINIMAL)
 
     def start_requests(self):
-        self.fileLoader()
         url = self.main + '/venda/goias/goiania/lote-terreno_residencial/'
-        yield scrapy.Request(url=url, callback=self.parse)
+        yield scrapy.Request(url=url, callback=self.parse_page)
 
     def storeLinks(self, links):
         for link in links:
             self.links.append(link.get_attribute('href'))
 
-    def parse(self, response):
+    def parse_page(self, response):
         self.driver.get(response.url)
         while True:
             try:
@@ -63,9 +48,9 @@ class VivarealSpider(scrapy.Spider):
                 break
         self.driver.close()
         for item in self.links:
-            yield scrapy.Request(url=item, callback=self.parse_page)
+            yield scrapy.Request(url=item, callback=self.parse)
 
-    def parse_page(self, response):
+    def parse(self, response):
         link = response.url.split('id-')[1]
         id = link.split('/')[0]
         link = response.url
@@ -84,4 +69,6 @@ class VivarealSpider(scrapy.Spider):
         except (RuntimeError, NameError):
             lat = ''
             lon = ''
-        self.planilha.writerow([id, address, price, lat, lon, link])
+        novo_lote = Lote(id=id, address=address, price=price,
+                         lat=lat, lon=lon, link=link)
+        yield novo_lote

@@ -4,6 +4,8 @@ import csv
 from selenium import webdriver
 from time import sleep
 
+from crawler.item import Lote
+
 
 class ZapimoveisSpider(scrapy.Spider):
     name = 'zapimoveis'
@@ -13,28 +15,13 @@ class ZapimoveisSpider(scrapy.Spider):
         super(ZapimoveisSpider, self).__init__(*args, **kwargs)
         self.init = int(init)
         self.end = int(end)
-        self.filename = filename
         self.url = 'https://www.zapimoveis.com.br/venda/terreno-padrao'
         self.city = city
         self.state = state
         self.driver = webdriver.Firefox()
         self.links = []
 
-    def fileLoader(self):
-        try:
-            file = open('results/%s.csv' % self.filename, 'w')
-            self.planilha = csv.writer(
-                file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            # The line below set the headers of the sheet, on the file creation
-            self.planilha.writerow(
-                ['ID', 'Bairro', 'Rua', 'Preço', 'Latitude', 'Longitude', 'Link'])
-        except ValueError:
-            self.file = open('results/%s.csv' % self.filename, 'a')
-            self.planilha = csv.writer(
-                file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
     def start_requests(self):
-        self.fileLoader()
         url = 'https://www.zapimoveis.com.br/venda/terreno-padrao/go+goiania/#{"pagina":"1","possuiendereco":"True"}'
         yield scrapy.Request(url, callback=self.parse)
 
@@ -76,6 +63,7 @@ class ZapimoveisSpider(scrapy.Spider):
         logradouro = response.css(
             'span.logradouro::text').extract_first()
         logradouro = logradouro.split(',')[0] if logradouro != None else ''
+        address = street + ' - ' + logradouro
         price = response.css(
             'div.value-ficha::text').extract()[1].strip()[3:].split(',')[0]
         coord = response.css(
@@ -87,4 +75,6 @@ class ZapimoveisSpider(scrapy.Spider):
         else:
             lat = ''
             lon = ''
-        self.planilha.writerow([id, logradouro, street, price, lat, lon, link])
+        novo_lote = Lote(id=id, address=address, price=price,
+                         lat=lat, lon=lon, link=link)
+        yield novo_lote
