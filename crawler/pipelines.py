@@ -14,7 +14,7 @@ class lotePipeline(object):
     def __init__(self):
         self.filename = date.now().strftime('%d-%m-%Y %H:%M:%S')
         try:
-            file = open('results/%s.ods' % self.filename, 'w')
+            file = open('results/%s.ods' % self.filename, 'w+')
             self.planilha = csv.writer(
                 file, delimiter='@', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             # The line below set the headers of the sheet, on the file creation

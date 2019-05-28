@@ -44,7 +44,7 @@ class ZapimoveisSpider(scrapy.Spider):
                     '//section[contains(@class,"endereco")]/a')
                 self.storeLink(links)
                 self.driver.execute_script("arguments[0].click()", next)
-                sleep(5)
+                sleep(3)
                 if position == max:
                     break
             except Exception as err:

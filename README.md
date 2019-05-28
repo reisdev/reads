@@ -43,16 +43,26 @@ This project actually have spiders for the following websites:
 To clone the repository, run in the command line:
 
 ```bash
-git clone http://github.com.br/MatheusDosReis/real-estate-agency-scraper
+$ git clone http://github.com.br/MatheusDosReis/real-estate-agency-scraper
 
-cd real-state-agency-scraper
+$ cd real-state-agency-scraper
 ```
 
 ### Install python dependencies
 
 Run the command bellow:
 
-`pip install -r requirements.txt`
+```bash
+$ pip install -r requirements.txt
+```
+
+### Create the result's folder
+
+Run the command:
+
+```bash 
+$ mkdir results
+```
 
 ## Usage
 

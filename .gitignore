@@ -1,4 +1,6 @@
-*.cpython-36.pyc
+.vscode
+*.cpython-*.pyc
 *.log
 *.sh
 results
+env
