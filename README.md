@@ -1,4 +1,4 @@
-# real-estate-agency-scraper
+# R.E.A.D.S - Real Estate Agency Data Scraper
 
 Project built to crawl Real Estate Agency websites. It can get the price, location and anything else.
 
