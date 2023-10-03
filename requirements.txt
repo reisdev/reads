@@ -99,7 +99,7 @@ twisted==22.10.0
     # via scrapy
 typing-extensions==4.4.0
     # via twisted
-urllib3==1.26.14
+urllib3==1.26.17
     # via requests
 w3lib==1.19.0
     # via
